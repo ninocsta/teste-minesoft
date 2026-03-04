@@ -1,11 +1,18 @@
 [
   {
     "name": "financeiro",
-    "remoteEntry": "http://localhost:4201/remoteEntry.js",
+    "remoteEntry": "http://localhost:4100/remoteEntry.js",
     "exposedModule": "./Module",
     "moduleName": "FinanceiroModule",
     "routePath": "financeiro",
-    "displayName": "Financeiro",
-    "enabled": false
+    "displayName": "Financeiro"
+  },
+  {
+    "name": "ecommerce",
+    "remoteEntry": "http://localhost:4300/remoteEntry.js",
+    "exposedModule": "./Module",
+    "moduleName": "EcommerceModule",
+    "routePath": "ecommerce",
+    "displayName": "ecommerce"
   }
 ]

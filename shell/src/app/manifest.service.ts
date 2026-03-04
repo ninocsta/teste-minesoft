@@ -14,9 +14,8 @@ export interface MfeConfig {
 @Injectable({ providedIn: 'root' })
 export class ManifestService {
   private readonly configsSubject = new BehaviorSubject<MfeConfig[]>([]);
-  private readonly defaultManifestUrl = '/assets/config/mf.manifest.json';
+  private readonly defaultManifestUrl = 'assets/config/mf.manifest.json';
   private lastSignature = '';
-  private pollingId: ReturnType<typeof setInterval> | null = null;
 
   setConfigs(configs: MfeConfig[]): void {
     this.configsSubject.next(configs);
@@ -29,19 +28,6 @@ export class ManifestService {
   async load(router: Router): Promise<void> {
     const configs = await this.fetchManifest();
     this.applyConfigs(router, configs);
-  }
-
-  startPolling(router: Router, intervalMs = 3000): void {
-    if (this.pollingId) return;
-    this.pollingId = setInterval(async () => {
-      try {
-        const configs = await this.fetchManifest();
-        this.applyConfigs(router, configs);
-      } catch (err) {
-        // Mantem a configuracao atual em caso de falha temporaria.
-        console.warn('[ManifestService] falha ao atualizar o manifest:', err);
-      }
-    }, intervalMs);
   }
 
   private getManifestUrl(): string {
