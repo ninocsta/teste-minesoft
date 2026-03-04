@@ -1,0 +1,19 @@
+<nav style="padding: 14px 24px; background: #1565c0; color: white; display: flex; gap: 16px; align-items: center; font-family: sans-serif;">
+  <strong style="font-size: 1.1rem;">🐚 Shell</strong>
+  <a routerLink="/"
+     routerLinkActive="active-link"
+     [routerLinkActiveOptions]="{exact: true}"
+     style="color: white; text-decoration: none; padding: 6px 12px; border-radius: 4px;">
+    Home
+  </a>
+  <a *ngFor="let mfe of manifestService.getConfigs()"
+     [routerLink]="'/' + mfe.routePath"
+     routerLinkActive="active-link"
+     style="color: white; text-decoration: none; padding: 6px 14px; border-radius: 4px; background: rgba(255,255,255,0.15);">
+    {{ mfe.displayName }}
+  </a>
+</nav>
+
+<div style="padding: 28px; font-family: sans-serif;">
+  <router-outlet></router-outlet>
+</div>
