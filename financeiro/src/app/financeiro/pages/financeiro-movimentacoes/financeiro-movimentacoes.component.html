@@ -1,0 +1,21 @@
+<div class="page-card">
+  <h3>Movimentações</h3>
+  <p>Segunda tela interna para validar submenu no host.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Descrição</th>
+        <th>Valor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of rows">
+        <td>{{ row.id }}</td>
+        <td>{{ row.descricao }}</td>
+        <td [class.entrada]="row.tipo === 'entrada'" [class.saida]="row.tipo === 'saida'">{{ row.valor }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

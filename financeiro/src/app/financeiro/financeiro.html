@@ -1,5 +1,15 @@
-<div style="border: 2px solid #2e7d32; border-radius: 8px; padding: 24px; background: #f1f8e9;">
-  <h2 style="color: #2e7d32; margin: 0 0 12px;">💰 Módulo Financeiro</h2>
-  <p style="color: #555;">Este módulo foi carregado dinamicamente pelo Shell via Module Federation.</p>
-  <p style="font-size: 0.85rem; color: #888;">remoteEntry: <code>http://localhost:4201/remoteEntry.js</code></p>
-</div>
+<section class="financeiro-shell">
+  <header class="financeiro-shell__header">
+    <h2>Módulo Financeiro</h2>
+    <p>Remote de teste para validar menu dinâmico com subitens no admin.</p>
+  </header>
+
+  <nav class="financeiro-shell__nav">
+    <a routerLink="./" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active">Início</a>
+    <a routerLink="./movimentacoes" routerLinkActive="active">Movimentações</a>
+  </nav>
+
+  <article class="financeiro-shell__content">
+    <router-outlet></router-outlet>
+  </article>
+</section>

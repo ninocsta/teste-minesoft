@@ -1,0 +1,38 @@
+.page-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fbfdff;
+  padding: 16px;
+}
+
+.page-card h3 {
+  margin: 0 0 8px;
+  color: #111827;
+}
+
+.page-card p {
+  margin: 0 0 12px;
+  color: #4b5563;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 8px;
+  text-align: left;
+}
+
+.entrada {
+  color: #059669;
+  font-weight: 600;
+}
+
+.saida {
+  color: #dc2626;
+  font-weight: 600;
+}

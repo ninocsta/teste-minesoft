@@ -1,0 +1,22 @@
+.page-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fbfdff;
+  padding: 16px;
+}
+
+.page-card h3 {
+  margin: 0 0 8px;
+  color: #111827;
+}
+
+.page-card p {
+  margin: 0 0 12px;
+  color: #4b5563;
+}
+
+.page-card ul {
+  margin: 0;
+  padding-left: 18px;
+  color: #1f2937;
+}

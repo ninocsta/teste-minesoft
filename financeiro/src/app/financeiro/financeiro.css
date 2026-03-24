@@ -1,0 +1,41 @@
+.financeiro-shell {
+  border: 1px solid #d8dce4;
+  border-radius: 10px;
+  background: #ffffff;
+  padding: 24px;
+}
+
+.financeiro-shell__header h2 {
+  margin: 0;
+  color: #1f2d3d;
+}
+
+.financeiro-shell__header p {
+  margin: 8px 0 0;
+  color: #6b7280;
+}
+
+.financeiro-shell__nav {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.financeiro-shell__nav a {
+  text-decoration: none;
+  color: #235789;
+  border: 1px solid #c9d6e3;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-weight: 500;
+}
+
+.financeiro-shell__nav a.active {
+  color: #ffffff;
+  background: #235789;
+  border-color: #235789;
+}
+
+.financeiro-shell__content {
+  margin-top: 18px;
+}
